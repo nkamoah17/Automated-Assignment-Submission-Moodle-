@@ -52,10 +52,10 @@ def submit_assignment(file_tup):
    elif folder == 'PHYS-235-B':
         class_select = driver.find_element_by_link_text(
            'Intro Phys: Elect/Magnetism'
-   elif folder == 'ENGR-209-B'
+   elif folder == 'ENGR-209-B':
         class_select = driver.find_element_by_link_text(
             'Intro Laws of Conser & Thermo'
-   elif folder == 'MATH-271-A'
+   elif folder == 'MATH-271-A':
         class_select = driver.find_element_by_link_text('Multivariable Calculus')
    elif folder == 'CS-104-C":
           class.select = driver.find_element_by_link_text('Applied Computing')
