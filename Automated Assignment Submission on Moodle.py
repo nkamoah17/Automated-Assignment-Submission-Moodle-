@@ -1,29 +1,25 @@
 import selenium
 from selenium import webdriver
-
 # time for pausing between navigation
 import time
-
 # Datetime for recording time of submission
 import datetime
-
 # os for file management
 import os
-
 
 def submit_assignment(file_tup):
     # Using Chrome to access web
     driver = webdriver.Chrome(r"C:\Users\Kenneth Amoah Nyame\Anaconda3\selenium\webdriver\chromedriver.exe")
-
+    
     time.sleep(1)
-
+    
     # Open the website
     driver.get('https://moodle.calvin.edu')
 
     # Password for Moodle
     with open(r'C:\Users\Kenneth Amoah Nyame\Desktop\pswd.txt') as f:
         pswd = f.read()
-
+        
     # Locate id and password
     id_box = driver.find_element_by_name('username')
     pass_box = driver.find_element_by_name('password')
@@ -77,7 +73,7 @@ def submit_assignment(file_tup):
 
     submit_assignment = driver.find_element_by_id('submit_file_button')
     submit_assignment.click()
-
+            
     # Wait for the page
     time.sleep(2)
 
@@ -89,13 +85,12 @@ def submit_assignment(file_tup):
     submitted_file_location = os.path.join(submitted_dir, submitted_file_name)
      os.rename(file_location, submitted_file_location)
 
-  print('{} Assignment for Class {} successfully submitted at {}.'.format(
+   print('{} Assignment for Class {} successfully submitted at {}.'.format(
        file_name, folder, datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')))
 
     print('Submitted assignment available at {}.'.format(submitted_file_location))
 
     return
-
 
 if __name__ == "__main__":
 
