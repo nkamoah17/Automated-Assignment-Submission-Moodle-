@@ -54,10 +54,10 @@ def submit_assignment(file_tup):
    elif folder == 'MATH-271-A':
         class_select = driver.find_element_by_link_text('Multivariable Calculus')
    elif folder == 'CS-104-C":
-          class.select = driver.find_element_by_link_text('Applied Computing')
+        class.select = driver.find_element_by_link_text('Applied Computing')
 
     # Click on the specific class
-   class_select.click()
+    class_select.click()
 
     assignment_button = driver.find_element_by_class_name('activityinstance')
     assignment_button.click()
@@ -89,9 +89,7 @@ def submit_assignment(file_tup):
        file_name, folder, datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')))
 
     print('Submitted assignment available at {}.'.format(submitted_file_location))
-
     return
-
 if __name__ == "__main__":
 
     # Build tuple of (folder, file) to turn in
