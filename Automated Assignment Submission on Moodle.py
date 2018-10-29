@@ -82,7 +82,7 @@ def submit_assignment(file_tup):
    submitted_dir = os.path.join(submitted_dir, folder)
    submitted_file_name = 'Submitted ' + file_name
 
-    submitted_file_location = os.path.join(submitted_dir, submitted_file_name)
+   submitted_file_location = os.path.join(submitted_dir, submitted_file_name)
      os.rename(file_location, submitted_file_location)
 
    print('{} Assignment for Class {} successfully submitted at {}.'.format(
